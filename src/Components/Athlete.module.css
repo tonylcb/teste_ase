@@ -1,0 +1,160 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 60px 1fr .7fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.athletes {
+  background: #fff;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(155, 155, 155, 0.3);
+  border-top: 1px solid rgba(155, 155, 155, 0.3);
+  text-align: center;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+.athletes:hover, .activeAthlete{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+  z-index: 5;
+}
+
+.athletes li p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+}
+
+.arrowContainer {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  margin-left: 5px;
+  width: 12px;
+  height: 12px;
+  transition: 0.3s;
+}
+
+.arrowDown {
+  transform: rotate(90deg);
+}
+
+.athletesData {
+  background: var(--ice);
+  border-bottom: 1px solid rgba(155, 155, 155, 0.3);
+  margin-top: 5px;
+}
+
+.columnCell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 58px;
+}
+
+.columnCell span:first-child{
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.columnCell span:nth-child(2), .columnCell span:nth-child(4), .columnCell span:nth-child(6){
+  font-size: 0.875rem;
+}
+
+.containerMedals {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.medals {
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+}
+
+@media(max-width: 800px) {
+  .athletes {
+    font-size: 0.875rem;
+  }
+}
+
+@media(max-width: 500px) {
+  .gridContainer {
+    grid-template-columns: 30px 1fr .7fr 1fr 1fr;
+  }
+  
+  .columnCell span:nth-child(2), .columnCell span:nth-child(4), .columnCell span:nth-child(6){
+    font-size: 0.75rem;
+  }
+
+  .columnCell span:first-child{
+    font-size: 0.75rem;
+  }
+  
+  .medals {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media(max-width: 400px) {
+  .gridContainer {
+    grid-template-columns: 20px 1fr 1fr 1fr 1fr;
+  }
+  
+  .athletes {
+    font-size: 0.75rem;
+  }
+
+  .columnCell span:nth-child(2), .columnCell span:nth-child(4), .columnCell span:nth-child(6){
+    font-size: 0.75rem;
+  }
+
+  .columnCell span:first-child{
+    font-size: 0.75rem;
+  }
+
+  .containerMedals {
+    gap: 1px;
+  }
+
+  .medals {
+    width: 14px;
+    height: 14px;
+  }
+
+  .columnCell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+    gap: 7px;
+    height: 50px;
+  }
+  
+.athletes {
+  border-right: 1px solid rgba(155, 155, 155, 0.3);
+  border-left: 1px solid rgba(155, 155, 155, 0.3);
+}
+
+.athletesData {
+  background: var(--ice);
+  border-bottom: 1px solid rgba(155, 155, 155, 0.3);
+  border-left: 1px solid rgba(155, 155, 155, 0.3);
+  border-right: 1px solid rgba(155, 155, 155, 0.3);
+  margin-top: 5px;
+}
+
+}
